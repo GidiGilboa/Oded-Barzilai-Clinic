@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-heebo);
+
+  --color-background: var(--color-background);
+  --color-background-secondary: var(--color-background-secondary);
+  --color-surface: var(--color-surface);
+  --color-surface-muted: var(--color-surface-muted);
+  --color-text: var(--color-text);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-inverse: var(--color-text-inverse);
+  --color-border: var(--color-border);
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-accent: var(--color-accent);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-accent-text: var(--color-accent-text);
+  --color-success: var(--color-success);
+  --color-danger: var(--color-danger);
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-heebo), "Segoe UI", Arial, sans-serif;
+}
+
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-text);
+}
+
+/* Visible, consistent focus ring across all interactive elements. */
+:focus-visible {
+  outline: 2px solid var(--color-accent-text);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  inset-inline-start: 1rem;
+  top: -3rem;
+  z-index: 100;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.25rem;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Balanced line lengths for long-form Hebrew/English body copy. */
+.prose-measure {
+  max-width: 62ch;
+}
+
+/* ---- Accessibility adjustments widget ---- */
+/* Selector specificity (html[attr]) intentionally beats the unlayered
+   :root theme <style> tag written by getThemeCss(), regardless of source order. */
+
+html[data-a11y-text-size="1"] {
+  font-size: 112.5%;
+}
+
+html[data-a11y-text-size="2"] {
+  font-size: 125%;
+}
+
+html[data-a11y-contrast="true"] {
+  --color-background: #ffffff;
+  --color-background-secondary: #f0f0f0;
+  --color-surface: #ffffff;
+  --color-surface-muted: #eeeeee;
+  --color-text: #000000;
+  --color-text-secondary: #1a1a1a;
+  --color-text-inverse: #ffffff;
+  --color-border: #000000;
+  --color-primary: #000000;
+  --color-primary-hover: #262626;
+  --color-accent: #6b4f00;
+  --color-accent-soft: #e0e0e0;
+  --color-accent-text: #000000;
+  --color-success: #005c00;
+  --color-danger: #8b0000;
+}
+
+html[data-a11y-underline-links="true"] a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+html[data-a11y-reduce-motion="true"] *,
+html[data-a11y-reduce-motion="true"] *::before,
+html[data-a11y-reduce-motion="true"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
