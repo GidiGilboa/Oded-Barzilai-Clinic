@@ -13,11 +13,13 @@ export interface NavDictionary {
   openMenu: string;
   closeMenu: string;
   languageSwitchLabel: string;
+  callLabel: string;
 }
 
 export interface CommonDictionary {
   phone: string;
   whatsapp: string;
+  emergencyPhone: string;
   address: string;
   email: string;
   hours: string;

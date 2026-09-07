@@ -11,10 +11,12 @@ export const en: Dictionary = {
     openMenu: "Open menu",
     closeMenu: "Close menu",
     languageSwitchLabel: "Switch language",
+    callLabel: "Call the clinic",
   },
   common: {
     phone: "Phone",
     whatsapp: "WhatsApp",
+    emergencyPhone: "Emergency number",
     address: "Address",
     email: "Email",
     hours: "Opening hours",

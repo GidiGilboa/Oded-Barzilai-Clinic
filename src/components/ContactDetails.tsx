@@ -29,8 +29,8 @@ export function ContactDetails({ locale, dict }: { locale: Locale; dict: Diction
             <dd className="text-text">{clinic.phoneDisplay}</dd>
           </div>
           <div className="flex flex-col gap-1">
-            <dt className="text-text-secondary">{dict.common.whatsapp}</dt>
-            <dd className="text-text">{clinic.whatsappDisplay}</dd>
+            <dt className="text-text-secondary">{dict.common.emergencyPhone}</dt>
+            <dd className="text-text">{clinic.emergencyPhoneDisplay}</dd>
           </div>
           <div className="flex flex-col gap-1">
             <dt className="text-text-secondary">{dict.common.email}</dt>

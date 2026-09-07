@@ -23,13 +23,17 @@ export const clinic = {
   countryEn: "Israel",
   postalCode: undefined as string | undefined,
 
-  phoneDisplay: "052-326-5416",
-  phoneDisplayEn: "052-326-5416",
+  phoneDisplay: "09-7404040",
+  phoneDisplayEn: "09-7404040",
   /** E.164 value for tel:/JSON-LD use. */
-  phoneE164: "+972523265416" as string | undefined,
+  phoneE164: "+97297404040" as string | undefined,
 
-  whatsappDisplay: "052-326-5416",
-  whatsappE164: "+972523265416" as string | undefined,
+  whatsappDisplay: "09-7404040",
+  whatsappE164: "+97297404040" as string | undefined,
+
+  emergencyPhoneDisplay: "052-6877742",
+  /** E.164 value for tel: use. */
+  emergencyPhoneE164: "+972526877742" as string | undefined,
 
   email: "odedbarz@yahoo.com",
 
