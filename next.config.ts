@@ -5,3 +5,8 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+// Enables the local `next dev` experience to run the same Cloudflare
+// bindings/context that production Workers get, via `wrangler.jsonc`.
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+initOpenNextCloudflareForDev();
