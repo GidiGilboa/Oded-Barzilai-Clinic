@@ -73,6 +73,16 @@ export const en: Dictionary = {
       cta: "More about Dr. Barzilai",
       imageAlt: "Dr. Oded Barzilai reviewing a dental X-ray in the treatment room",
     },
+    hygienistIntro: {
+      title: "Hagit Barzilai",
+      role: "Certified Dental Hygienist",
+      body: [
+        "Hagit Barzilai is a dental hygienist with over 20 years of experience, a graduate of the dental hygiene program at Hadassah Ein Kerem. After years of also working in the public sector, Hagit now works at a private clinic in Ra'anana.",
+        "Her approach is based on gentle, attentive, and personalized care for every patient — especially those who come in with dental anxiety or fear. Hagit provides hygiene treatments, deep cleanings and root planing, preparation for gum treatments, preventive and maintenance care, as well as treatments for children.",
+      ],
+      cta: "More about Hagit Barzilai",
+      imageAlt: "Hagit Barzilai, certified dental hygienist, at the clinic",
+    },
     treatmentsSection: {
       title: "Main areas of treatment",
       subtitle:
@@ -152,6 +162,21 @@ export const en: Dictionary = {
     ],
     placeholdersNote:
       "Additional professional details (years of experience, university, certifications) will be added here once provided by the clinic. No unverified information is used.",
+    hygienist: {
+      name: "Hagit Barzilai",
+      role: "Certified Dental Hygienist",
+      body: [
+        "Hagit Barzilai is a dental hygienist with over 20 years of experience in the field. She completed her hygiene studies at the Hadassah Ein Kerem School of Dental Medicine in 2001, and has worked in the field ever since out of a deep love for the profession and for her patients.",
+        "Throughout her professional career, Hagit has worked in both the public sector and private practice, and today she works at a private clinic in Ra'anana. Over the years she has continued to study, stay updated, and expand her professional knowledge, understanding that the field of dental and gum care is constantly evolving.",
+        "Hagit's approach to treatment is based first and foremost on listening, gentleness, and personalization. She believes treatment should be adapted to the patient, not the other way around, and she makes a point of listening to each patient's needs, concerns, and requests, and tailoring her approach accordingly.",
+        "She gives special attention to patients who are anxious about dental treatment. Many patients come to her worried or fearful about treatment, but discover during the visit itself that professional care can also be calm and gentle. Hagit takes care to explain, listen, and work at a pace that suits the patient, in order to create a sense of security and comfort throughout the treatment.",
+        "In her work, Hagit provides hygiene treatments, preventive and maintenance care for oral and gum health, as well as deeper treatments, including root planing — a thorough cleaning of deeper areas around the teeth, performed as needed and according to the treatment plan's recommendations. She also helps prepare patients for gum treatments and their follow-up maintenance.",
+        "As needed and according to treatment guidelines, Hagit also uses dedicated materials such as fluoride and PerioChip, and provides patients with guidance for properly maintaining oral and gum health over time.",
+        "Hagit also treats children, adapting her approach to each child's age and needs, aiming to create a positive and pleasant experience around dental care and oral health from a young age.",
+        "After more than two decades in the profession, Hagit continues to find great satisfaction in her work, and especially in the human connection with her patients. For her, professional care isn't just about the quality of the treatment itself, but also about how the patient feels while in the chair.",
+      ],
+      imageAlt: "Hagit Barzilai, certified dental hygienist, at the clinic",
+    },
     cta: {
       title: "Want to know more before booking?",
       body: "Feel free to reach out by phone or WhatsApp with any question, even before scheduling a visit.",

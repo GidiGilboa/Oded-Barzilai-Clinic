@@ -71,6 +71,13 @@ export interface HomeDictionary {
     cta: string;
     imageAlt: string;
   };
+  hygienistIntro: {
+    title: string;
+    role: string;
+    body: string[];
+    cta: string;
+    imageAlt: string;
+  };
   treatmentsSection: {
     title: string;
     subtitle: string;
@@ -112,6 +119,12 @@ export interface AboutDictionary {
     body: string;
   }[];
   placeholdersNote: string;
+  hygienist: {
+    name: string;
+    role: string;
+    body: string[];
+    imageAlt: string;
+  };
   cta: {
     title: string;
     body: string;

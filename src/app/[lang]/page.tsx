@@ -44,7 +44,7 @@ export default async function HomePage(props: PageProps<"/[lang]">) {
       />
       <Hero locale={locale} hero={dict.home.hero} viewTreatmentsLabel={dict.common.viewAllTreatments} />
       <TrustBar title={dict.home.trust.title} items={dict.home.trust.items} />
-      <DoctorIntro locale={locale} content={dict.home.doctorIntro} />
+      <DoctorIntro locale={locale} content={dict.home.doctorIntro} hygienist={dict.home.hygienistIntro} />
       <HomeTreatmentsSection
         locale={locale}
         content={dict.home.treatmentsSection}

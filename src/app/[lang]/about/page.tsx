@@ -78,6 +78,33 @@ export default async function AboutPage(props: PageProps<"/[lang]/about">) {
         </div>
       </section>
 
+      <section id="hagit" className="scroll-mt-24 border-t border-border bg-background">
+        <div className="mx-auto grid w-full max-w-6xl items-start gap-12 px-6 py-16 md:grid-cols-[0.85fr_1.15fr] md:gap-16 md:px-10 md:py-24">
+          <div className="relative aspect-[5/6] w-full max-w-sm overflow-hidden rounded-full bg-surface-muted ring-1 ring-border md:max-w-none">
+            <Image
+              src="/images/clinic-staff-portrait.jpg"
+              alt={dict.about.hygienist.imageAlt}
+              fill
+              sizes="(min-width: 768px) 420px, 90vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-1">
+              <h2 className="text-[1.75rem] font-semibold text-text md:text-[2rem]">
+                {dict.about.hygienist.name}
+              </h2>
+              <span className="text-sm font-medium text-accent-text">{dict.about.hygienist.role}</span>
+            </div>
+            {dict.about.hygienist.body.map((paragraph) => (
+              <p key={paragraph} className="prose-measure text-base leading-relaxed text-text-secondary">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <InlineCTA
         title={dict.about.cta.title}
         body={dict.about.cta.body}
