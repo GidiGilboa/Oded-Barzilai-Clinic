@@ -263,6 +263,8 @@ export const he: Dictionary = {
     contrastLabel: "ניגודיות גבוהה",
     reduceMotionLabel: "עצירת אנימציות",
     underlineLinksLabel: "הדגשת קישורים",
+    largeCursorLabel: "סמן גדול",
+    textSpacingLabel: "ריווח טקסט",
     reset: "איפוס הגדרות",
   },
 };

@@ -198,6 +198,8 @@ export interface AccessibilityWidgetDictionary {
   contrastLabel: string;
   reduceMotionLabel: string;
   underlineLinksLabel: string;
+  largeCursorLabel: string;
+  textSpacingLabel: string;
   reset: string;
 }
 

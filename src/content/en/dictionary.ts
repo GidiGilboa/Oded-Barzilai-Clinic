@@ -263,6 +263,8 @@ export const en: Dictionary = {
     contrastLabel: "High contrast",
     reduceMotionLabel: "Stop animations",
     underlineLinksLabel: "Underline links",
+    largeCursorLabel: "Large cursor",
+    textSpacingLabel: "Text spacing",
     reset: "Reset settings",
   },
 };

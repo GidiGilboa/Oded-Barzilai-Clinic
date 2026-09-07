@@ -15,6 +15,8 @@ interface A11yPrefs {
   contrast: boolean;
   reduceMotion: boolean;
   underlineLinks: boolean;
+  largeCursor: boolean;
+  textSpacing: boolean;
 }
 
 const defaultPrefs: A11yPrefs = {
@@ -22,6 +24,8 @@ const defaultPrefs: A11yPrefs = {
   contrast: false,
   reduceMotion: false,
   underlineLinks: false,
+  largeCursor: false,
+  textSpacing: false,
 };
 
 /**
@@ -32,7 +36,7 @@ const defaultPrefs: A11yPrefs = {
 export function AccessibilityInitScript() {
   const code = `(function(){try{var p=JSON.parse(localStorage.getItem(${JSON.stringify(
     STORAGE_KEY
-  )})||"{}");var h=document.documentElement;if(p.textSize)h.setAttribute("data-a11y-text-size",String(p.textSize));if(p.contrast)h.setAttribute("data-a11y-contrast","true");if(p.reduceMotion)h.setAttribute("data-a11y-reduce-motion","true");if(p.underlineLinks)h.setAttribute("data-a11y-underline-links","true");}catch(e){}})();`;
+  )})||"{}");var h=document.documentElement;if(p.textSize)h.setAttribute("data-a11y-text-size",String(p.textSize));if(p.contrast)h.setAttribute("data-a11y-contrast","true");if(p.reduceMotion)h.setAttribute("data-a11y-reduce-motion","true");if(p.underlineLinks)h.setAttribute("data-a11y-underline-links","true");if(p.largeCursor)h.setAttribute("data-a11y-large-cursor","true");if(p.textSpacing)h.setAttribute("data-a11y-text-spacing","true");}catch(e){}})();`;
   return <script dangerouslySetInnerHTML={{ __html: code }} />;
 }
 
@@ -47,6 +51,8 @@ function applyPrefsToDocument(prefs: A11yPrefs) {
   setBooleanAttr(html, "data-a11y-contrast", prefs.contrast);
   setBooleanAttr(html, "data-a11y-reduce-motion", prefs.reduceMotion);
   setBooleanAttr(html, "data-a11y-underline-links", prefs.underlineLinks);
+  setBooleanAttr(html, "data-a11y-large-cursor", prefs.largeCursor);
+  setBooleanAttr(html, "data-a11y-text-spacing", prefs.textSpacing);
 }
 
 function setBooleanAttr(el: HTMLElement, name: string, value: boolean) {
@@ -126,6 +132,8 @@ export function AccessibilityWidget({
     { key: "contrast", label: dict.contrastLabel },
     { key: "reduceMotion", label: dict.reduceMotionLabel },
     { key: "underlineLinks", label: dict.underlineLinksLabel },
+    { key: "largeCursor", label: dict.largeCursorLabel },
+    { key: "textSpacing", label: dict.textSpacingLabel },
   ];
 
   return (
