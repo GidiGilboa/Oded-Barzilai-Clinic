@@ -1,11 +1,13 @@
 "use client";
 
 import { useActionState, useEffect, useId, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import type { ContactFormDictionary } from "@/lib/dictionary-types";
 import { submitContactForm } from "@/lib/actions/contact";
 import { initialContactFormState } from "@/lib/actions/contact-types";
 import { ActionButton, LinkButton } from "@/components/Button";
 import { clinic } from "@/content/shared/clinic";
+import { emailjsConfig } from "@/lib/emailjs-config";
 
 interface SubmittedValues {
   name: string;
@@ -22,17 +24,19 @@ function buildMailtoHref(subject: string, values: SubmittedValues) {
   return `mailto:${clinic.email}?${params.toString()}`;
 }
 
+type SendStatus = "idle" | "sending" | "sent" | "failed";
+
 export function ContactForm({ form }: { form: ContactFormDictionary }) {
   const [state, formAction, isPending] = useActionState(
     submitContactForm,
     initialContactFormState
   );
   const [submittedValues, setSubmittedValues] = useState<SubmittedValues | null>(null);
-  const hasOpenedMailClient = useRef(false);
+  const [sendStatus, setSendStatus] = useState<SendStatus>("idle");
+  const hasSentEmail = useRef(false);
 
   const nameId = useId();
   const phoneId = useId();
-  const preferredId = useId();
   const messageId = useId();
   const nameErrorId = useId();
   const phoneErrorId = useId();
@@ -49,19 +53,42 @@ export function ContactForm({ form }: { form: ContactFormDictionary }) {
   const mailtoHref = submittedValues ? buildMailtoHref(form.emailSubject, submittedValues) : null;
 
   useEffect(() => {
-    if (state.status === "success" && mailtoHref && !hasOpenedMailClient.current) {
-      hasOpenedMailClient.current = true;
-      window.location.href = mailtoHref;
-    }
+    if (state.status !== "success" || !submittedValues || hasSentEmail.current) return;
+    hasSentEmail.current = true;
+    setSendStatus("sending");
+    emailjs
+      .send(
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        {
+          name: submittedValues.name,
+          phone: submittedValues.phone,
+          message: submittedValues.message,
+        },
+        { publicKey: emailjsConfig.publicKey }
+      )
+      .then(() => setSendStatus("sent"))
+      .catch(() => setSendStatus("failed"));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.status]);
 
-  if (state.status === "success") {
+  if (sendStatus === "sent") {
     return (
       <div role="status" className="flex flex-col items-start gap-4 border border-border bg-surface p-8">
         <div>
           <h2 className="text-lg font-medium text-text">{form.successTitle}</h2>
           <p className="mt-2 text-sm leading-relaxed text-text-secondary">{form.successBody}</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (sendStatus === "failed") {
+    return (
+      <div role="alert" className="flex flex-col items-start gap-4 border border-danger/40 bg-surface p-8">
+        <div>
+          <h2 className="text-lg font-medium text-text">{form.errorTitle}</h2>
+          <p className="mt-2 text-sm leading-relaxed text-text-secondary">{form.errorBody}</p>
         </div>
         {mailtoHref && (
           <LinkButton href={mailtoHref} variant="secondary">
@@ -125,32 +152,6 @@ export function ContactForm({ form }: { form: ContactFormDictionary }) {
         )}
       </div>
 
-      <fieldset className="flex flex-col gap-2">
-        <legend id={preferredId} className="text-sm font-medium text-text">
-          {form.preferredContact}
-        </legend>
-        <div className="flex flex-wrap gap-x-6 gap-y-2" role="radiogroup" aria-labelledby={preferredId}>
-          {(
-            [
-              ["phone", form.preferredContactOptions.phone],
-              ["whatsapp", form.preferredContactOptions.whatsapp],
-              ["email", form.preferredContactOptions.email],
-            ] as const
-          ).map(([value, label]) => (
-            <label key={value} className="flex items-center gap-2 text-sm text-text">
-              <input
-                type="radio"
-                name="preferredContact"
-                value={value}
-                defaultChecked={value === "phone"}
-                className="h-4 w-4 accent-[var(--color-accent-text)]"
-              />
-              {label}
-            </label>
-          ))}
-        </div>
-      </fieldset>
-
       <div className="flex flex-col gap-2">
         <label htmlFor={messageId} className="text-sm font-medium text-text">
           {form.message} <span className="text-text-secondary">({form.messageOptional})</span>
@@ -166,8 +167,14 @@ export function ContactForm({ form }: { form: ContactFormDictionary }) {
 
       <p className="text-xs leading-relaxed text-text-secondary">{form.privacyNote}</p>
 
-      <ActionButton type="submit" variant="primary" disabled={isPending} aria-busy={isPending} className="self-start">
-        {isPending ? form.submitting : form.submit}
+      <ActionButton
+        type="submit"
+        variant="primary"
+        disabled={isPending || sendStatus === "sending"}
+        aria-busy={isPending || sendStatus === "sending"}
+        className="self-start"
+      >
+        {isPending || sendStatus === "sending" ? form.submitting : form.submit}
       </ActionButton>
     </form>
   );

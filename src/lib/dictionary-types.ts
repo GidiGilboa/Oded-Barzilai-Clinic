@@ -118,7 +118,6 @@ export interface AboutDictionary {
     heading: string;
     body: string;
   }[];
-  placeholdersNote: string;
   hygienist: {
     name: string;
     role: string;
@@ -147,8 +146,6 @@ export interface ContactFormDictionary {
   namePlaceholder: string;
   phone: string;
   phonePlaceholder: string;
-  preferredContact: string;
-  preferredContactOptions: { phone: string; whatsapp: string; email: string };
   message: string;
   messagePlaceholder: string;
   messageOptional: string;
@@ -187,11 +184,33 @@ export interface FooterDictionary {
   tagline: string;
 }
 
-export interface LegalPageDictionary {
+export type PrivacyBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "subheading"; text: string }
+  | { type: "list"; items: string[] }
+  | { type: "contact" };
+
+export interface PrivacyPageDictionary {
   meta: PageMeta;
   title: string;
-  reviewNotice: string;
-  body: string[];
+  intro: string[];
+  contactLabels: { email: string; phone: string };
+  sections: {
+    heading: string;
+    blocks: PrivacyBlock[];
+  }[];
+}
+
+export interface AccessibilityPageDictionary {
+  meta: PageMeta;
+  title: string;
+  intro: string[];
+  sections: {
+    heading: string;
+    paragraphs: string[];
+    list?: string[];
+    note?: string;
+  }[];
 }
 
 export interface NotFoundDictionary {
@@ -215,6 +234,8 @@ export interface AccessibilityWidgetDictionary {
   underlineLinksLabel: string;
   largeCursorLabel: string;
   textSpacingLabel: string;
+  pageStructureLabel: string;
+  pageStructureEmpty: string;
   reset: string;
 }
 
@@ -226,8 +247,8 @@ export interface Dictionary {
   treatments: TreatmentsDictionary;
   contact: ContactDictionary;
   footer: FooterDictionary;
-  accessibilityPage: LegalPageDictionary;
-  privacyPage: LegalPageDictionary;
+  accessibilityPage: AccessibilityPageDictionary;
+  privacyPage: PrivacyPageDictionary;
   notFound: NotFoundDictionary;
   accessibilityWidget: AccessibilityWidgetDictionary;
 }

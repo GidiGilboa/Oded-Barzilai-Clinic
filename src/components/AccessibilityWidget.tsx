@@ -63,6 +63,28 @@ function setBooleanAttr(el: HTMLElement, name: string, value: boolean) {
   }
 }
 
+interface HeadingEntry {
+  id: string;
+  level: number;
+  text: string;
+}
+
+function collectHeadings(): HeadingEntry[] {
+  const container = document.getElementById("main") ?? document.body;
+  const nodes = Array.from(container.querySelectorAll<HTMLElement>("h1, h2, h3, h4, h5, h6"));
+  return nodes
+    .filter((node) => (node.textContent ?? "").trim().length > 0)
+    .map((node, index) => {
+      if (!node.id) node.id = `a11y-heading-${index}`;
+      if (!node.hasAttribute("tabindex")) node.setAttribute("tabindex", "-1");
+      return {
+        id: node.id,
+        level: Number(node.tagName.slice(1)),
+        text: node.textContent!.trim(),
+      };
+    });
+}
+
 function AccessIcon() {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -98,7 +120,10 @@ export function AccessibilityWidget({
       return defaultPrefs;
     }
   });
+  const [showStructure, setShowStructure] = useState(false);
+  const [headings, setHeadings] = useState<HeadingEntry[]>([]);
   const panelId = useId();
+  const structureId = useId();
   const buttonRef = useRef<HTMLButtonElement>(null);
   const firstControlRef = useRef<HTMLButtonElement>(null);
 
@@ -125,6 +150,14 @@ export function AccessibilityWidget({
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [open]);
+
+  function handleToggleStructure() {
+    setShowStructure((prev) => {
+      const next = !prev;
+      if (next) setHeadings(collectHeadings());
+      return next;
+    });
+  }
 
   const textSizeLabels = [dict.textSizeDefault, dict.textSizeLarge, dict.textSizeLarger];
 
@@ -184,10 +217,44 @@ export function AccessibilityWidget({
             </div>
 
             <div className="flex flex-col gap-2">
+              <button
+                ref={firstControlRef}
+                type="button"
+                aria-expanded={showStructure}
+                aria-controls={structureId}
+                onClick={handleToggleStructure}
+                className="flex min-h-10 items-center justify-center rounded-sm border border-border px-3 py-2 text-sm font-medium text-text hover:text-accent-text"
+              >
+                {dict.pageStructureLabel}
+              </button>
+              {showStructure && (
+                <div
+                  id={structureId}
+                  className="flex max-h-72 flex-col gap-1 overflow-y-auto border border-border bg-background-secondary p-2"
+                >
+                  {headings.length === 0 ? (
+                    <p className="px-2 py-1.5 text-[0.95rem] text-text-secondary">{dict.pageStructureEmpty}</p>
+                  ) : (
+                    headings.map((heading) => (
+                      <a
+                        key={heading.id}
+                        href={`#${heading.id}`}
+                        onClick={() => setOpen(false)}
+                        style={{ paddingInlineStart: `${0.5 + (heading.level - 1) * 0.5}rem` }}
+                        className="rounded-sm py-1.5 text-[0.95rem] leading-snug text-text hover:bg-surface-muted hover:text-accent-text"
+                      >
+                        {heading.text}
+                      </a>
+                    ))
+                  )}
+                </div>
+              )}
+            </div>
+
+            <div className="flex flex-col gap-2">
               <span className="text-sm font-medium text-text">{dict.textSizeLabel}</span>
               <div className="flex items-center gap-2">
                 <button
-                  ref={firstControlRef}
                   type="button"
                   aria-label={dict.decreaseText}
                   disabled={prefs.textSize === 0}

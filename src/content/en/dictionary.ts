@@ -144,24 +144,22 @@ export const en: Dictionary = {
     },
     title: "Dr. Oded Barzilai",
     intro:
-      "A general dentist combining clinical precision with a personal, calm approach for every patient — from the first visit through a comprehensive treatment plan.",
+      "Professionalism, experience, and personal attention — to give every patient quality, relaxed, and personalized care.",
     imageAlt: "Dr. Oded Barzilai standing in the treatment room, arms crossed",
     sections: [
       {
         heading: "Professional background",
-        body: "[YEARS_OF_EXPERIENCE] — details of Dr. Barzilai's professional experience and training, including his university, [UNIVERSITY], and professional certifications, [PROFESSIONAL_CERTIFICATIONS], will be added here once confirmed.",
+        body: "Dr. Oded Barzilai, a graduate of the Tel Aviv University School of Dental Medicine, is a dentist with extensive professional experience, providing a wide range of dental treatments under one roof.",
       },
       {
-        heading: "Approach to treatment",
-        body: "The professional approach is built on listening before deciding: understanding the clinical picture in depth, an open conversation about the options, and adapting treatment to each patient's needs and pace — without rushing and without skipping explanations.",
+        heading: "Areas of treatment",
+        body: "Dr. Barzilai specializes in providing professional, thorough, and precise care, using high-quality equipment and materials and tailoring the treatment plan to each patient's individual needs. Among the treatments he provides: root canal treatments, aesthetic and restorative treatments, crowns, dental implants, extractions, and surgical procedures.",
       },
       {
-        heading: "Personal attention throughout",
-        body: "Patients arrive at the clinic in different circumstances — some for a routine checkup, some anxious about treatment, and some returning after a long break. Each one is given time and attention, so treatment feels clear rather than another source of stress.",
+        heading: "Personal attention and approach",
+        body: "Alongside his professional knowledge and experience, Dr. Barzilai places great emphasis on personal attention, patience, and listening. He believes that quality dental care begins with understanding the patient and creating a sense of security, and he makes a point of explaining the options and choosing the right solution together.",
       },
     ],
-    placeholdersNote:
-      "Additional professional details (years of experience, university, certifications) will be added here once provided by the clinic. No unverified information is used.",
     hygienist: {
       name: "Hagit Barzilai",
       role: "Certified Dental Hygienist",
@@ -212,19 +210,17 @@ export const en: Dictionary = {
       namePlaceholder: "Your name",
       phone: "Phone",
       phonePlaceholder: "050-0000000",
-      preferredContact: "Preferred contact method",
-      preferredContactOptions: { phone: "Phone", whatsapp: "WhatsApp", email: "Email" },
       message: "Message",
       messagePlaceholder: "Anything we should know in advance? (optional)",
       messageOptional: "Optional",
       submit: "Send request",
       submitting: "Sending...",
-      successTitle: "Almost done",
-      successBody:
-        "Your email app is opening now with the message ready to send to the clinic. Just click \"send\". If it didn't open automatically, use the link below.",
+      successTitle: "Message sent",
+      successBody: "Your inquiry was sent successfully to the clinic. We'll be in touch as soon as possible.",
       emailFallbackCta: "Open the email message",
       errorTitle: "We couldn't send your request",
-      errorBody: "Something went wrong. Please try again, or contact us directly by phone or WhatsApp.",
+      errorBody:
+        "Something went wrong sending it automatically. You can send an email directly using the link below, or contact us by phone or WhatsApp.",
       requiredError: "This field is required",
       invalidPhoneError: "Please enter a valid phone number",
       privacyNote: "Your details will only be used to contact you about your appointment, and will not be shared with any third party.",
@@ -249,13 +245,40 @@ export const en: Dictionary = {
       description: "Accessibility statement for Dr. Oded Barzilai's dental clinic website.",
     },
     title: "Accessibility Statement",
-    reviewNotice:
-      "This text is a placeholder draft only, and does not constitute a final or legally approved accessibility statement. It must be replaced with wording reviewed and approved according to applicable Israeli accessibility regulations before official publication.",
-    body: [
-      "We aim to make this website accessible to all users, including people with disabilities, and to meet WCAG 2.2 Level AA guidelines.",
-      "The site was built with accessibility principles in mind: semantic structure, keyboard navigation, descriptive alt text for images, sufficient color contrast, and support for reduced-motion preferences.",
-      "Every page also includes an accessibility adjustments button (in the corner of the screen) that lets you enlarge text, turn on high contrast, stop animations, and emphasize links.",
-      "If you encounter an accessibility issue on this site, please contact us using the details on the Contact page so we can address it.",
+    intro: [
+      "Dr. Oded Barzilai Dental Clinic – Dental Care & Oral Rehabilitation places great importance on making its services and information accessible to the general public, including people with disabilities.",
+      "We work to provide a browsing experience that is as comfortable, clear, and accessible as possible, in the belief that every person deserves an equal opportunity to access information and services independently, respectfully, and comfortably.",
+    ],
+    sections: [
+      {
+        heading: "Website accessibility",
+        paragraphs: [
+          "As part of building and operating this website, efforts were made to align it with the accessibility requirements set by law and with the guidelines of Israeli Standard IS 5568 – Guidelines for Web Content Accessibility, at level AA, based on the WCAG guidelines.",
+          "The website was designed and built with an emphasis on accessibility, in accordance with the site's characteristics and the content displayed on it.",
+        ],
+      },
+      {
+        heading: "Personalization options",
+        paragraphs: ["The website includes an accessibility component that allows, among other things, adjustments such as:"],
+        list: [
+          "Increasing and decreasing text size.",
+          "Increasing text spacing.",
+          "Switching to high-contrast mode.",
+          "Highlighting links.",
+          "Enlarging the mouse cursor.",
+          "Reducing or stopping animations.",
+          "Resetting accessibility settings.",
+        ],
+        note: "It's important to emphasize that the accessibility component is an additional aid, and does not replace the accessibility efforts implemented in the website itself.",
+      },
+      {
+        heading: "Limitations and disclaimers",
+        paragraphs: [
+          "We make ongoing efforts to keep the website accessible and to improve the user experience. However, some content or components on the site may not yet be fully accessible, or an accessibility issue may exist that was not identified during development and testing.",
+          "In addition, third-party components or services, such as maps, external systems, or links to other websites, are not under the clinic's control and may therefore have accessibility limitations.",
+          "If you encounter an accessibility issue on the website, please contact us using the details on the Contact page, so we can address it.",
+        ],
+      },
     ],
   },
   privacyPage: {
@@ -264,12 +287,209 @@ export const en: Dictionary = {
       description: "Privacy policy for Dr. Oded Barzilai's dental clinic website.",
     },
     title: "Privacy Policy",
-    reviewNotice:
-      "This text is a placeholder draft only and does not constitute a final privacy policy. It must be replaced with legal wording reviewed and approved by the clinic and/or legal counsel before official publication.",
-    body: [
-      "This website may collect details you voluntarily provide through the contact form, such as your name and contact information, solely to respond to your inquiry and schedule an appointment.",
-      "We do not sell or share personal information with third parties for purposes unrelated to providing the service.",
-      "Details on data retention, cookies, and analytics tools, if used, will be added here in the future.",
+    intro: [
+      "Dr. Oded Barzilai Dental Clinic – Dental Care & Oral Rehabilitation (\"the Clinic\", \"we\") respects the privacy of website users and of the clinic's patients.",
+      "This policy explains what information may be collected through use of the website, how we use it, how we protect it, and what rights users have regarding information relating to them.",
+      "Use of the website and the services offered through it is subject to this policy.",
+    ],
+    contactLabels: { email: "Email", phone: "Phone" },
+    sections: [
+      {
+        heading: "1. What information do we collect?",
+        blocks: [
+          { type: "subheading", text: "Information you provide" },
+          {
+            type: "paragraph",
+            text: "When you contact us through the contact form, an appointment request, WhatsApp, phone, or another communication channel shown on the site, we may collect information such as:",
+          },
+          {
+            type: "list",
+            items: ["Name.", "Phone number.", "Email address, if provided.", "The content of your inquiry and any other information you choose to share with us."],
+          },
+          {
+            type: "paragraph",
+            text: "We ask that you not submit detailed medical information or sensitive information that isn't necessary for making contact or scheduling an appointment through the website's contact form.",
+          },
+          { type: "subheading", text: "Medical information" },
+          {
+            type: "paragraph",
+            text: "As part of receiving treatment at the clinic, medical information required for diagnosis, treatment, follow-up, and management of medical care may be collected and retained.",
+          },
+          {
+            type: "paragraph",
+            text: "This information may include, as needed, medical details, medical history, treatment plans, imaging, documents, and records relating to treatment.",
+          },
+          {
+            type: "paragraph",
+            text: "This medical information is managed within the clinic's systems and in accordance with the legal requirements governing the retention of medical information and medical confidentiality.",
+          },
+          { type: "subheading", text: "Technical information" },
+          {
+            type: "paragraph",
+            text: "When using the website, technical and automatic information may be collected, such as:",
+          },
+          {
+            type: "list",
+            items: [
+              "IP address.",
+              "Device and browser type.",
+              "Operating system.",
+              "Pages visited.",
+              "Visit times and site usage data.",
+              "Technical information required for operation, security, and improvement of the website.",
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "The actual scope of information collected depends on the tools and services used on the website.",
+          },
+        ],
+      },
+      {
+        heading: "2. Cookies and measurement tools",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "The website may use cookies and similar technologies for site operation, saving preferences, security, usage measurement, and improving the user experience.",
+          },
+          {
+            type: "paragraph",
+            text: "We act in accordance with the relevant legal requirements regarding the use of cookies and measurement tools.",
+          },
+        ],
+      },
+      {
+        heading: "3. Purposes of using information",
+        blocks: [
+          { type: "paragraph", text: "The information collected may be used by us for the following purposes:" },
+          {
+            type: "list",
+            items: [
+              "Responding to inquiries received through the website.",
+              "Contacting a user who requested a callback.",
+              "Scheduling appointments and managing the relationship with patients.",
+              "Providing dental care services and managing medical treatment, where the person is a patient.",
+              "Operating, maintaining, and securing the website.",
+              "Improving the service and experience on the website.",
+              "Preventing misuse of the website.",
+              "Complying with legal requirements and the instructions of competent authorities.",
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "We will not use information for a purpose inconsistent with the purposes for which it was collected, unless permitted or required by law.",
+          },
+        ],
+      },
+      {
+        heading: "4. Disclosure of information to third parties",
+        blocks: [
+          { type: "paragraph", text: "The clinic does not sell or rent personal information for commercial purposes." },
+          {
+            type: "paragraph",
+            text: "However, in certain cases information may be accessible to external service providers who assist us in operating the website and the clinic, such as hosting providers, form services, appointment-scheduling systems, communication services, analytics systems, information security, and other technology providers.",
+          },
+          {
+            type: "paragraph",
+            text: "These providers will receive access to information only to the extent required to provide their service to us and in accordance with appropriate arrangements.",
+          },
+          {
+            type: "paragraph",
+            text: "Information may also be disclosed when required by law, a court order, a demand from a competent authority, or to protect the clinic's rights.",
+          },
+        ],
+      },
+      {
+        heading: "5. Information security",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "We take reasonable and appropriate measures to protect the personal information held by us from unauthorized access, use, alteration, or disclosure.",
+          },
+          {
+            type: "paragraph",
+            text: "Security measures are determined according to the type and scope of the information and how it is used, and in accordance with the relevant legal requirements. The Privacy Protection Regulations (Data Security), 5777-2017 establish, among other things, requirements relating to access permissions, user identification, communication security, and safeguards for databases.",
+          },
+          { type: "paragraph", text: "However, no information or communication system can guarantee absolute security." },
+        ],
+      },
+      {
+        heading: "6. Data retention",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "We will retain personal information for the period required for the purposes for which it was collected, for providing the service, managing treatment, complying with legal obligations, or protecting our rights.",
+          },
+          {
+            type: "paragraph",
+            text: "Medical information will be retained in accordance with the obligations applicable to the clinic and the retention periods set by law and relevant guidelines.",
+          },
+        ],
+      },
+      {
+        heading: "7. Rights regarding information",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "In accordance with the Privacy Protection Law, you may have rights regarding personal information relating to you, including the right to review information and to request correction of information that is incorrect, incomplete, unclear, or outdated, in accordance with the law.",
+          },
+          { type: "paragraph", text: "Requests regarding personal information can be directed to:" },
+          { type: "contact" },
+        ],
+      },
+      {
+        heading: "8. Marketing communications",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "To the extent the clinic sends marketing communications, this will be done in accordance with the relevant legal requirements and subject to the opt-out rights established by law.",
+          },
+          {
+            type: "paragraph",
+            text: "You may contact the clinic to request removal from a mailing list, in accordance with the mechanism shown in the message or using the contact details in this policy.",
+          },
+        ],
+      },
+      {
+        heading: "9. Links and third-party services",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "The website may include links or components of external services, such as Google Maps, WhatsApp, social networks, or other technology services.",
+          },
+          {
+            type: "paragraph",
+            text: "Use of these services may be subject to the privacy policies of those parties, and the clinic is not responsible for their privacy policies or how they process information.",
+          },
+        ],
+      },
+      {
+        heading: "10. Minors",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "The website's services are also intended for parents and young patients. When a minor is involved, the services and any information provided should be used in accordance with the law and the extent to which a parent's or guardian's involvement is needed.",
+          },
+        ],
+      },
+      {
+        heading: "11. Changes to this privacy policy",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "We may update this policy from time to time, including as a result of changes to the website's activity, the services we use, or legal requirements.",
+          },
+        ],
+      },
+      {
+        heading: "12. Contact",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "For questions, requests, or inquiries regarding this privacy policy, please contact us using the details on the Contact page, so we can address it.",
+          },
+        ],
+      },
     ],
   },
   notFound: {
@@ -292,6 +512,8 @@ export const en: Dictionary = {
     underlineLinksLabel: "Underline links",
     largeCursorLabel: "Large cursor",
     textSpacingLabel: "Text spacing",
+    pageStructureLabel: "Page structure",
+    pageStructureEmpty: "No headings found on this page",
     reset: "Reset settings",
   },
 };

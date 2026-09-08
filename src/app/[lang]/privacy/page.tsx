@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { isLocale, defaultLocale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import { buildMetadata } from "@/lib/seo";
-import { LegalPage } from "@/components/LegalPage";
+import { PrivacyStatement } from "@/components/PrivacyStatement";
 
 export async function generateMetadata(props: PageProps<"/[lang]/privacy">): Promise<Metadata> {
   const { lang } = await props.params;
@@ -21,5 +21,5 @@ export default async function PrivacyPage(props: PageProps<"/[lang]/privacy">) {
   const locale = isLocale(lang) ? lang : defaultLocale;
   const dict = getDictionary(locale);
 
-  return <LegalPage page={dict.privacyPage} />;
+  return <PrivacyStatement page={dict.privacyPage} />;
 }

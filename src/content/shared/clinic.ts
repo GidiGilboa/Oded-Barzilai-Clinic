@@ -35,7 +35,7 @@ export const clinic = {
   /** E.164 value for tel: use. */
   emergencyPhoneE164: "+972526877742" as string | undefined,
 
-  email: "odedbarz@yahoo.com",
+  email: "barzilai.dental@gmail.com",
 
   mapsEmbedUrl:
     "https://www.google.com/maps?q=%D7%94%D7%A0%D7%95%D7%A4%D7%A8+2%2C+%D7%A8%D7%A2%D7%A0%D7%A0%D7%94&output=embed",

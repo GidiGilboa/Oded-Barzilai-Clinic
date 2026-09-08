@@ -56,25 +56,12 @@ export default async function AboutPage(props: PageProps<"/[lang]/about">) {
 
       <section className="bg-background">
         <div className="mx-auto flex w-full max-w-3xl flex-col gap-12 px-6 py-16 md:px-10 md:py-24">
-          {dict.about.sections.map((section) => {
-            const isPlaceholder = section.body.includes("[");
-            return (
-              <div key={section.heading} className="flex flex-col gap-3">
-                <h2 className="text-xl font-semibold text-text">{section.heading}</h2>
-                <p
-                  className={
-                    isPlaceholder
-                      ? "border border-dashed border-border bg-surface-muted p-4 text-[0.95rem] italic leading-relaxed text-text-secondary"
-                      : "text-base leading-relaxed text-text-secondary"
-                  }
-                >
-                  {section.body}
-                </p>
-              </div>
-            );
-          })}
-
-          <p className="text-sm leading-relaxed text-text-secondary">{dict.about.placeholdersNote}</p>
+          {dict.about.sections.map((section) => (
+            <div key={section.heading} className="flex flex-col gap-3">
+              <h2 className="text-xl font-semibold text-text">{section.heading}</h2>
+              <p className="text-base leading-relaxed text-text-secondary">{section.body}</p>
+            </div>
+          ))}
         </div>
       </section>
 
