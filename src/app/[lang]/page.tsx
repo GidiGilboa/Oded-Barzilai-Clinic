@@ -30,13 +30,11 @@ export default async function HomePage(props: PageProps<"/[lang]">) {
   const { lang } = await props.params;
   const locale = isLocale(lang) ? lang : defaultLocale;
   const dict = getDictionary(locale);
-  const homeFaqs = faqItems.slice(0, 4);
-
   return (
     <>
       <JsonLd
         data={buildFaqJsonLd(
-          homeFaqs.map((item) => ({
+          faqItems.map((item) => ({
             question: locale === "he" ? item.questionHe : item.questionEn,
             answer: locale === "he" ? item.answerHe : item.answerEn,
           }))
@@ -55,7 +53,7 @@ export default async function HomePage(props: PageProps<"/[lang]">) {
       <AestheticSection locale={locale} content={dict.home.aesthetic} />
       <FAQ
         locale={locale}
-        items={homeFaqs}
+        items={faqItems}
         title={dict.home.faqSection.title}
         subtitle={dict.home.faqSection.subtitle}
       />

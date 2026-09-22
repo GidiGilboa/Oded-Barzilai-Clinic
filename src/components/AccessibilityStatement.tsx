@@ -1,3 +1,4 @@
+import { clinic } from "@/content/shared/clinic";
 import type { AccessibilityPageDictionary } from "@/lib/dictionary-types";
 
 export function AccessibilityStatement({ page }: { page: AccessibilityPageDictionary }) {
@@ -32,6 +33,18 @@ export function AccessibilityStatement({ page }: { page: AccessibilityPageDictio
               )}
               {section.note && (
                 <p className="prose-measure text-base leading-relaxed text-text-secondary">{section.note}</p>
+              )}
+              {section.contact && (
+                <dl className="flex flex-col gap-1 text-base text-text-secondary">
+                  <div className="flex gap-2">
+                    <dt className="font-medium text-text">{page.contactLabels.email}:</dt>
+                    <dd>{clinic.email}</dd>
+                  </div>
+                  <div className="flex gap-2">
+                    <dt className="font-medium text-text">{page.contactLabels.phone}:</dt>
+                    <dd>{clinic.phoneDisplay}</dd>
+                  </div>
+                </dl>
               )}
             </div>
           ))}

@@ -15,7 +15,7 @@ export function TreatmentDetailRow({
   return (
     <div
       id={treatment.id}
-      className="grid scroll-mt-24 gap-8 border-t border-border py-12 first:border-t-0 first:pt-0 md:grid-cols-2 md:gap-14 md:py-16"
+      className="grid scroll-mt-24 gap-8 border-t border-border py-12 first:border-t-0 md:grid-cols-2 md:gap-14 md:py-16"
     >
       <div
         className={`relative aspect-[4/3] w-full overflow-hidden rounded-sm bg-surface-muted ${

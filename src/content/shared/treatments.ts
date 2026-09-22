@@ -74,7 +74,7 @@ export const treatments: Treatment[] = [
     descriptionEn:
       "Root canal treatment is needed when infection reaches the inner pulp of a tooth, causing pain or inflammation. The goal is to clean the root canals, preserve the natural tooth, and prevent the problem from returning. We explain each step in advance to reduce uncertainty and anxiety.",
     icon: "dental-drill",
-    image: "/images/clinic-team-consultation.jpg",
+    image: "/images/inWork.JPG",
     imageAlt: {
       he: "שני אנשי צוות רפואי בוחנים יחד צילום רנטגן של שיניים",
       en: "Two clinicians reviewing a dental X-ray together",
@@ -93,7 +93,7 @@ export const treatments: Treatment[] = [
     descriptionEn:
       "Oral rehabilitation is a staged process for situations that call for a comprehensive look at the whole bite — whether due to wear, tooth loss, or a combination of issues. It always begins with a thorough diagnosis and a treatment plan that is personalized and explained with full transparency.",
     icon: "dentures",
-    image: "/images/doctor-portrait.jpg",
+    image: "/images/oded-work.png",
     imageAlt: {
       he: "ד״ר עודד ברזילי עומד בחדר הטיפולים במרפאה",
       en: "Dr. Oded Barzilai standing in the clinic's treatment room",
@@ -131,7 +131,7 @@ export const treatments: Treatment[] = [
     descriptionEn:
       "A child's first experience at the dentist shapes how they feel about dental care for years to come. We pay attention to the child's pace, explain each step in simple terms, and favor patience over speed.",
     icon: "cavities",
-    image: "/images/clinic-patient-treatment.jpg",
+    image: "/images/jonathan.jpg",
     imageAlt: {
       he: "טיפול שיניים רגוע במרפאה",
       en: "A calm dental treatment in the clinic",

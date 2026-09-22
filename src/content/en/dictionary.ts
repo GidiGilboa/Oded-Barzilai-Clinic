@@ -5,6 +5,7 @@ export const en: Dictionary = {
     home: "Home",
     about: "About",
     treatments: "Treatments",
+    gallery: "Gallery",
     contact: "Contact",
     bookAppointment: "Contact Us",
     skipToContent: "Skip to main content",
@@ -103,8 +104,18 @@ export const en: Dictionary = {
         },
         {
           quote:
-            "I had treatment for front crowns with Dr. Barzilai, and I'm very happy with the result. The process was professional and precise, and the result looks natural and beautiful. I feel much more confident in my smile. Highly recommended.",
-          name: "Riki Dotan",
+            "I came to Dr. Barzilai for a full oral rehabilitation plan after a lot of anxiety. From the very first moment I got a detailed explanation of every step, and the treatment was the most pleasant and professional experience I could have asked for. The result is simply perfect!",
+          name: "Miri S.",
+        },
+        {
+          quote:
+            "I had an impacted wisdom tooth extracted with him, a procedure I was very anxious about. Dr. Barzilai was gentle, patient, and made sure I didn't feel any pain. Highly recommended!",
+          name: "Haim B.",
+        },
+        {
+          quote:
+            "I was very impressed by the precision, professionalism, and personal attention in getting my porcelain veneers done. You can feel this is a dentist with a lot of experience, but also a very human approach.",
+          name: "Dana G.",
         },
       ],
     },
@@ -190,10 +201,17 @@ export const en: Dictionary = {
     title: "Treatments",
     intro:
       "The clinic's main areas of treatment. Every treatment begins with a diagnosis and a conversation about the options that suit your specific situation — this list will be updated and expanded over time.",
-    mainImageAlt: "A dentist treating a patient at a clinic",
-    ctaTitle: "Not sure what you need?",
+    ctaTitle: "Contact us",
     ctaBody: "Feel free to reach out before booking and ask any question about what might suit your situation.",
     ctaButton: "Contact us",
+  },
+  gallery: {
+    meta: {
+      title: "Gallery — Dr. Oded Barzilai Dental Clinic, Ra'anana",
+      description: "Photos from the clinic and team — Dr. Oded Barzilai Dental Clinic in Ra'anana.",
+    },
+    title: "Gallery",
+    intro: "A few photos from our clinic and team.",
   },
   contact: {
     meta: {
@@ -249,6 +267,7 @@ export const en: Dictionary = {
       "Dr. Oded Barzilai Dental Clinic – Dental Care & Oral Rehabilitation places great importance on making its services and information accessible to the general public, including people with disabilities.",
       "We work to provide a browsing experience that is as comfortable, clear, and accessible as possible, in the belief that every person deserves an equal opportunity to access information and services independently, respectfully, and comfortably.",
     ],
+    contactLabels: { email: "Email", phone: "Phone" },
     sections: [
       {
         heading: "Website accessibility",
@@ -278,6 +297,11 @@ export const en: Dictionary = {
           "In addition, third-party components or services, such as maps, external systems, or links to other websites, are not under the clinic's control and may therefore have accessibility limitations.",
           "If you encounter an accessibility issue on the website, please contact us using the details on the Contact page, so we can address it.",
         ],
+      },
+      {
+        heading: "Accessibility Coordinator",
+        paragraphs: ["Accessibility coordinator: Dr. Oded Barzilai."],
+        contact: true,
       },
     ],
   },

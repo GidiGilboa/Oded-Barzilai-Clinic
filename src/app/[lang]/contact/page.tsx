@@ -35,19 +35,23 @@ export default async function ContactPage(props: PageProps<"/[lang]/contact">) {
         ])}
       />
 
-      <section className="relative overflow-hidden border-b border-border bg-background">
-        <GoldEmblemWatermark side="end" />
+      <section className="relative border-b border-border bg-background">
         <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-12 px-6 py-14 md:grid-cols-[1.05fr_0.95fr] md:gap-16 md:py-20 md:px-10">
-          <div className="flex flex-col gap-4">
-            <h1 className="text-[2rem] font-semibold text-text md:text-[2.5rem]">{dict.contact.title}</h1>
-            <p className="prose-measure text-lg leading-relaxed text-text-secondary">{dict.contact.intro}</p>
+          <div className="relative flex flex-col gap-4">
+            <GoldEmblemWatermark side="center" />
+            <h1 className="relative z-10 text-[2rem] font-semibold text-text md:text-[2.5rem]">
+              {dict.contact.title}
+            </h1>
+            <p className="prose-measure relative z-10 text-lg leading-relaxed text-text-secondary">
+              {dict.contact.intro}
+            </p>
           </div>
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-surface-muted ring-1 ring-border md:mx-0 md:justify-self-end">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl bg-surface-muted ring-1 ring-border md:mx-0 md:justify-self-end">
             <Image
-              src="/images/clinic-interior-1.webp"
+              src="/images/room1.JPG"
               alt={dict.contact.mainImageAlt}
               fill
-              sizes="(min-width: 768px) 380px, 80vw"
+              sizes="(min-width: 768px) 320px, 70vw"
               className="object-cover"
             />
           </div>

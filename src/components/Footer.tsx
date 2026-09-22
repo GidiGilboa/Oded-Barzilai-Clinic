@@ -24,6 +24,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <li><Link href={localizedPath(locale)} className="hover:text-text">{dict.nav.home}</Link></li>
             <li><Link href={localizedPath(locale, "about")} className="hover:text-text">{dict.nav.about}</Link></li>
             <li><Link href={localizedPath(locale, "treatments")} className="hover:text-text">{dict.nav.treatments}</Link></li>
+            <li><Link href={localizedPath(locale, "gallery")} className="hover:text-text">{dict.nav.gallery}</Link></li>
             <li><Link href={localizedPath(locale, "contact")} className="hover:text-text">{dict.nav.contact}</Link></li>
           </ul>
         </div>

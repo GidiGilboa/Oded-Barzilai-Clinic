@@ -34,6 +34,7 @@ export function Header({ locale, nav }: { locale: Locale; nav: NavDictionary }) 
     { href: localizedPath(locale), label: nav.home },
     { href: localizedPath(locale, "about"), label: nav.about },
     { href: localizedPath(locale, "treatments"), label: nav.treatments },
+    { href: localizedPath(locale, "gallery"), label: nav.gallery },
     { href: localizedPath(locale, "contact"), label: nav.contact },
   ];
 

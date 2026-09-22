@@ -7,6 +7,7 @@ export interface NavDictionary {
   home: string;
   about: string;
   treatments: string;
+  gallery: string;
   contact: string;
   bookAppointment: string;
   skipToContent: string;
@@ -135,7 +136,6 @@ export interface TreatmentsDictionary {
   meta: PageMeta;
   title: string;
   intro: string;
-  mainImageAlt: string;
   ctaTitle: string;
   ctaBody: string;
   ctaButton: string;
@@ -205,11 +205,13 @@ export interface AccessibilityPageDictionary {
   meta: PageMeta;
   title: string;
   intro: string[];
+  contactLabels: { email: string; phone: string };
   sections: {
     heading: string;
     paragraphs: string[];
     list?: string[];
     note?: string;
+    contact?: boolean;
   }[];
 }
 
@@ -239,12 +241,19 @@ export interface AccessibilityWidgetDictionary {
   reset: string;
 }
 
+export interface GalleryDictionary {
+  meta: PageMeta;
+  title: string;
+  intro: string;
+}
+
 export interface Dictionary {
   nav: NavDictionary;
   common: CommonDictionary;
   home: HomeDictionary;
   about: AboutDictionary;
   treatments: TreatmentsDictionary;
+  gallery: GalleryDictionary;
   contact: ContactDictionary;
   footer: FooterDictionary;
   accessibilityPage: AccessibilityPageDictionary;
