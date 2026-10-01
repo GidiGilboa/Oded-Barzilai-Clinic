@@ -45,13 +45,8 @@ export default async function TreatmentsPage(props: PageProps<"/[lang]/treatment
 
       <section className="bg-background">
         <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
-          {treatments.map((treatment, index) => (
-            <TreatmentDetailRow
-              key={treatment.id}
-              locale={locale}
-              treatment={treatment}
-              reversed={index % 2 === 1}
-            />
+          {treatments.map((treatment) => (
+            <TreatmentDetailRow key={treatment.id} locale={locale} treatment={treatment} />
           ))}
         </div>
       </section>

@@ -1,7 +1,8 @@
 /**
- * Renders a single-color line icon from /public/icons/<icon>.svg using a
- * CSS mask, so its color follows `currentColor` (unlike a plain <img>,
- * whose SVG content is isolated from page CSS).
+ * Renders a single-color icon from /public/icons/<icon> (filename including
+ * extension — svg or png) using a CSS mask, so its color follows
+ * `currentColor` (unlike a plain <img>, whose content is isolated from page
+ * CSS).
  */
 export function TreatmentIcon({
   icon,
@@ -10,7 +11,7 @@ export function TreatmentIcon({
   icon: string;
   className?: string;
 }) {
-  const maskUrl = `url(/icons/${icon}.svg)`;
+  const maskUrl = `url(/icons/${icon})`;
 
   return (
     <span

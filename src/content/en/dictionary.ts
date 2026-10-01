@@ -130,13 +130,6 @@ export const en: Dictionary = {
       ],
       imageAlt: "A clinic team member treating a patient gently and attentively",
     },
-    aesthetic: {
-      eyebrow: "Aesthetic dentistry",
-      title: "A beautiful smile, built on a healthy tooth",
-      body: "Improving the look of your smile is always done while protecting the tooth's long-term health. Every process starts with a conversation about your expectations and an honest look at what actually suits you.",
-      cta: "About aesthetic dentistry",
-      imageAlt: "A smiling patient during a dental treatment",
-    },
     faqSection: {
       title: "Frequently asked questions",
       subtitle: "A few answers that may help before your first visit.",
@@ -154,22 +147,12 @@ export const en: Dictionary = {
         "Meet Dr. Oded Barzilai, general dentist at Barzilai Dental Clinic in Ra'anana: professional approach, personal attention, and calm, adapted treatment for every patient.",
     },
     title: "Dr. Oded Barzilai",
-    intro:
-      "Professionalism, experience, and personal attention — to give every patient quality, relaxed, and personalized care.",
+    role: "General Dentist",
     imageAlt: "Dr. Oded Barzilai standing in the treatment room, arms crossed",
-    sections: [
-      {
-        heading: "Professional background",
-        body: "Dr. Oded Barzilai, a graduate of the Tel Aviv University School of Dental Medicine, is a dentist with extensive professional experience, providing a wide range of dental treatments under one roof.",
-      },
-      {
-        heading: "Areas of treatment",
-        body: "Dr. Barzilai specializes in providing professional, thorough, and precise care, using high-quality equipment and materials and tailoring the treatment plan to each patient's individual needs. Among the treatments he provides: root canal treatments, aesthetic and restorative treatments, crowns, dental implants, extractions, and surgical procedures.",
-      },
-      {
-        heading: "Personal attention and approach",
-        body: "Alongside his professional knowledge and experience, Dr. Barzilai places great emphasis on personal attention, patience, and listening. He believes that quality dental care begins with understanding the patient and creating a sense of security, and he makes a point of explaining the options and choosing the right solution together.",
-      },
+    body: [
+      "Dr. Oded Barzilai is a dentist and graduate of Tel Aviv University (2008), a member of the Israeli Dental Association, holder of an \"Updated Dentist\" certificate from the Israeli Dental Association, a member of the Association for Oral Rehabilitation, and a member of the Association for Digital Dentistry. Dr. Oded Barzilai regularly participates in lectures and conferences in Israel and abroad — a highly recommended dentist who combines uncompromising professionalism, personal attention, and advanced technology, and is consistently rated with glowing patient reviews. Dr. Oded Barzilai's clinic is a modern, leading dental practice offering a comprehensive solution for all types of dental treatment.",
+      "Dr. Barzilai specializes in providing professional, thorough, and precise care, using high-quality equipment and materials and tailoring the treatment plan to each patient's individual needs. Among the treatments he provides: root canal treatments, aesthetic and restorative treatments, crowns, dental implants, extractions, and surgical procedures.",
+      "Alongside his professional knowledge and experience, Dr. Barzilai places great emphasis on personal attention, patience, and listening. He believes that quality dental care begins with understanding the patient and creating a sense of security, and he makes a point of explaining the options and choosing the right solution together.",
     ],
     hygienist: {
       name: "Hagit Barzilai",

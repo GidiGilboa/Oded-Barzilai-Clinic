@@ -11,7 +11,6 @@ import { DoctorIntro } from "@/components/DoctorIntro";
 import { HomeTreatmentsSection } from "@/components/HomeTreatmentsSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { AnxietySection } from "@/components/AnxietySection";
-import { AestheticSection } from "@/components/AestheticSection";
 import { FAQ } from "@/components/FAQ";
 import { AppointmentCTA } from "@/components/AppointmentCTA";
 
@@ -50,7 +49,6 @@ export default async function HomePage(props: PageProps<"/[lang]">) {
       />
       <ReviewsSection dict={dict.home.reviews} />
       <AnxietySection content={dict.home.anxiety} />
-      <AestheticSection locale={locale} content={dict.home.aesthetic} />
       <FAQ
         locale={locale}
         items={faqItems}

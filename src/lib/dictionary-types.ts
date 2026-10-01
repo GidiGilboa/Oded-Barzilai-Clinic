@@ -92,13 +92,6 @@ export interface HomeDictionary {
     points: string[];
     imageAlt: string;
   };
-  aesthetic: {
-    eyebrow: string;
-    title: string;
-    body: string;
-    cta: string;
-    imageAlt: string;
-  };
   faqSection: {
     title: string;
     subtitle: string;
@@ -113,12 +106,9 @@ export interface HomeDictionary {
 export interface AboutDictionary {
   meta: PageMeta;
   title: string;
-  intro: string;
+  role: string;
+  body: string[];
   imageAlt: string;
-  sections: {
-    heading: string;
-    body: string;
-  }[];
   hygienist: {
     name: string;
     role: string;

@@ -45,7 +45,7 @@ export const clinic = {
   /** Geocoded from the street address (הנופר 2, רעננה) via OpenStreetMap Nominatim. */
   geo: { latitude: 32.1940755, longitude: 34.8838056 },
 
-  siteUrl: "https://www.barzilai-dental.example",
+  siteUrl: "https://oded-barzilai-clinic.gidi-gilboa.workers.dev",
 } as const;
 
 export const openingHours = [

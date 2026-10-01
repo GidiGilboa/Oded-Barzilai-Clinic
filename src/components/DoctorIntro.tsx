@@ -87,7 +87,7 @@ export function DoctorIntro({
   return (
     <section className="flex flex-col gap-16 bg-background py-16 md:gap-24 md:py-24">
       <TeamMemberBlock
-        imageSrc="/images/doctor-xray-review.png"
+        imageSrc="/images/IMG_3991.JPG"
         imageAlt={content.imageAlt}
         eyebrow={content.eyebrow}
         title={content.title}
@@ -96,7 +96,7 @@ export function DoctorIntro({
         ctaHref={aboutHref}
       />
       <TeamMemberBlock
-        imageSrc="/images/clinic-staff-portrait.jpg"
+        imageSrc="/images/hagit-alone.png"
         imageAlt={hygienist.imageAlt}
         title={hygienist.title}
         role={hygienist.role}

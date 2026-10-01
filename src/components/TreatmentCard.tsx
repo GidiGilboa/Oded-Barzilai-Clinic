@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
-import type { Treatment } from "@/content/shared/treatments";
+import type { TreatmentArea } from "@/content/shared/treatmentAreas";
 import { ArrowIcon } from "@/components/ArrowIcon";
 import { TreatmentIcon } from "@/components/TreatmentIcon";
 import { localizedPath } from "@/lib/i18n";
@@ -11,7 +11,7 @@ export function TreatmentCard({
   readMoreLabel,
 }: {
   locale: Locale;
-  treatment: Treatment;
+  treatment: TreatmentArea;
   readMoreLabel: string;
 }) {
   const isHe = locale === "he";
@@ -28,7 +28,7 @@ export function TreatmentCard({
           {isHe ? treatment.shortDescriptionHe : treatment.shortDescriptionEn}
         </p>
         <Link
-          href={`${localizedPath(locale, "treatments")}#${treatment.id}`}
+          href={localizedPath(locale, "treatments")}
           className="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-text"
         >
           {readMoreLabel}

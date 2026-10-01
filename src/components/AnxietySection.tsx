@@ -44,7 +44,7 @@ export function AnxietySection({ content }: { content: HomeDictionary["anxiety"]
 
         <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-surface-muted md:order-2">
           <Image
-            src="/images/clinic-patient-treatment.jpg"
+            src="/images/oded-work.png"
             alt={content.imageAlt}
             fill
             sizes="(min-width: 768px) 420px, 90vw"

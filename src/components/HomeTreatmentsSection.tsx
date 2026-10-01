@@ -1,7 +1,7 @@
 import type { Locale } from "@/lib/i18n";
 import { localizedPath } from "@/lib/i18n";
 import type { HomeDictionary } from "@/lib/dictionary-types";
-import { treatments } from "@/content/shared/treatments";
+import { treatmentAreas } from "@/content/shared/treatmentAreas";
 import { TreatmentGrid } from "@/components/TreatmentGrid";
 import { LinkButton } from "@/components/Button";
 import { ArrowIcon } from "@/components/ArrowIcon";
@@ -30,7 +30,7 @@ export function HomeTreatmentsSection({
         </div>
       </div>
       <div className="mx-auto w-full max-w-6xl px-6 pb-16 md:px-10 md:pb-24">
-        <TreatmentGrid locale={locale} treatments={treatments.slice(0, 6)} readMoreLabel={readMoreLabel} />
+        <TreatmentGrid locale={locale} treatments={treatmentAreas} readMoreLabel={readMoreLabel} />
       </div>
     </section>
   );

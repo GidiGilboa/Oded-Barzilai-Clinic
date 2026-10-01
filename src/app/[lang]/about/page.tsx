@@ -36,10 +36,10 @@ export default async function AboutPage(props: PageProps<"/[lang]/about">) {
 
       <section className="relative overflow-hidden border-b border-border bg-background">
         <GoldEmblemWatermark side="start" />
-        <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-12 px-6 py-14 md:grid-cols-[0.85fr_1.15fr] md:gap-16 md:py-20 md:px-10">
+        <div className="relative z-10 mx-auto grid w-full max-w-6xl items-start gap-12 px-6 py-14 md:grid-cols-[0.85fr_1.15fr] md:gap-16 md:py-20 md:px-10">
           <div className="relative aspect-[5/6] w-full max-w-sm overflow-hidden rounded-full bg-surface-muted ring-1 ring-border md:max-w-none">
             <Image
-              src="/images/doctor-portrait.jpg"
+              src="/images/oded-single.jpg"
               alt={dict.about.imageAlt}
               fill
               priority
@@ -47,21 +47,17 @@ export default async function AboutPage(props: PageProps<"/[lang]/about">) {
               className="object-cover"
             />
           </div>
-          <div className="flex flex-col gap-4">
-            <h1 className="text-[2rem] font-semibold text-text md:text-[2.5rem]">{dict.about.title}</h1>
-            <p className="prose-measure text-lg leading-relaxed text-text-secondary">{dict.about.intro}</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-background">
-        <div className="mx-auto flex w-full max-w-3xl flex-col gap-12 px-6 py-16 md:px-10 md:py-24">
-          {dict.about.sections.map((section) => (
-            <div key={section.heading} className="flex flex-col gap-3">
-              <h2 className="text-xl font-semibold text-text">{section.heading}</h2>
-              <p className="text-base leading-relaxed text-text-secondary">{section.body}</p>
+          <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-1">
+              <h1 className="text-[2rem] font-semibold text-text md:text-[2.5rem]">{dict.about.title}</h1>
+              <span className="text-sm font-medium text-accent-text">{dict.about.role}</span>
             </div>
-          ))}
+            {dict.about.body.map((paragraph) => (
+              <p key={paragraph} className="prose-measure text-base leading-relaxed text-text-secondary">
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
       </section>
 
