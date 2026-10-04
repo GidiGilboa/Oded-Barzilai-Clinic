@@ -43,7 +43,7 @@ export function Hero({
           />
           <div className="relative aspect-square w-full overflow-hidden rounded-full bg-surface-muted ring-1 ring-border">
             <Image
-              src="/images/oded-only.png"
+              src="/images/hero-clinic-dentist.jpg"
               alt={hero.imageAlt}
               fill
               priority
