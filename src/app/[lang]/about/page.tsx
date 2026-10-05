@@ -39,7 +39,7 @@ export default async function AboutPage(props: PageProps<"/[lang]/about">) {
         <div className="relative z-10 mx-auto grid w-full max-w-6xl items-start gap-12 px-6 py-14 md:grid-cols-[0.85fr_1.15fr] md:gap-16 md:py-20 md:px-10">
           <div className="relative aspect-[5/6] w-full max-w-sm overflow-hidden rounded-full bg-surface-muted ring-1 ring-border md:max-w-none">
             <Image
-              src="/images/oded-single.jpg"
+              src="/images/oded-navy-scrubs.jpg"
               alt={dict.about.imageAlt}
               fill
               priority
@@ -65,7 +65,7 @@ export default async function AboutPage(props: PageProps<"/[lang]/about">) {
         <div className="mx-auto grid w-full max-w-6xl items-start gap-12 px-6 py-16 md:grid-cols-[0.85fr_1.15fr] md:gap-16 md:px-10 md:py-24">
           <div className="relative aspect-[5/6] w-full max-w-sm overflow-hidden rounded-full bg-surface-muted ring-1 ring-border md:max-w-none">
             <Image
-              src="/images/clinic-staff-portrait.jpg"
+              src="/images/hagit-single.jpg"
               alt={dict.about.hygienist.imageAlt}
               fill
               sizes="(min-width: 768px) 420px, 90vw"
