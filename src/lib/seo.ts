@@ -8,7 +8,7 @@ interface BuildMetadataOptions {
   path?: string;
   title: string;
   description: string;
-  /** Relative path to an OG image under /public, defaults to the doctor portrait. */
+  /** Relative path to a 1200×630 OG image under /public, defaults to the doctor in the clinic. */
   ogImage?: string;
 }
 
@@ -24,7 +24,7 @@ export function buildMetadata({
   path = "",
   title,
   description,
-  ogImage = "/images/doctor-portrait.jpg",
+  ogImage = "/images/og-clinic-dentist.jpg",
 }: BuildMetadataOptions): Metadata {
   const url = absoluteUrl(locale, path);
   const heUrl = absoluteUrl("he", path);
@@ -48,7 +48,7 @@ export function buildMetadata({
       siteName: clinic.clinicNameEn,
       locale: locale === "he" ? "he_IL" : "en_US",
       alternateLocale: locale === "he" ? "en_US" : "he_IL",
-      images: [{ url: ogImage }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
       type: "website",
     },
     twitter: {

@@ -17,7 +17,8 @@ export function buildDentistJsonLd(locale: Locale) {
     alternateName: isHe ? clinic.clinicNameHe : clinic.clinicNameEn,
     description: isHe ? clinic.sloganHe : clinic.sloganEn,
     url: absoluteUrl(locale),
-    image: `${clinic.siteUrl}/images/doctor-portrait.jpg`,
+    image: `${clinic.siteUrl}/images/og-clinic-dentist.jpg`,
+    logo: `${clinic.siteUrl}/images/logo-tooth.png`,
     priceRange: undefined,
     medicalSpecialty: "Dentistry",
     address: {
